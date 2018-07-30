@@ -55,7 +55,7 @@ public:
 		GLchar infoLog[512];
 		// Vertex shader
 		vertex = glCreateShader(GL_VERTEX_SHADER);
-		glShaderSource(vertex, 1, &vShaderCode, &success);
+		glShaderSource(vertex, 1, &vShaderCode, NULL);
 		glCompileShader(vertex);
 		// Print compile errors if any
 		glGetShaderiv(vertex, GL_COMPILE_STATUS, &success);
@@ -66,7 +66,7 @@ public:
 		}
 		// Fragment Shader
 		fragment = glCreateShader(GL_FRAGMENT_SHADER);
-		glShaderSource(fragment, 1, &fShaderCode, &success);
+		glShaderSource(fragment, 1, &fShaderCode, NULL);
 		glCompileShader(fragment);
 		// Print compile errors if any
 		glGetShaderiv(fragment, GL_COMPILE_STATUS, &success);
